@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily Report</title>
+</head>
+<body>
+    <h1>Daily Report - {{ report_date }}</h1>
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Location</th>
+                <th>Visitor Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for report in daily_reports %}
+            <tr>
+                <td>{{ report.location }}</td>
+                <td>{{ report.visitor_count }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
